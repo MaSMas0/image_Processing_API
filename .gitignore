@@ -5,4 +5,5 @@
 *.log
 
 #excluding node modules directory
-./node_modules
+node_modules
+
