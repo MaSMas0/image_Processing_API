@@ -8,7 +8,7 @@ const imgArray = [
   'santamonica'
 ];
 
-const existingImgPath = path.resolve('../../public/images', __dirname);
-const generatedImgPath = path.resolve('../../public/thumbs', __dirname);
+const existingImgPath = path.resolve(__dirname, '../../public/images');
+const generatedImgPath = path.resolve(__dirname, '../../public/thumbs');
 
 export { imgArray, existingImgPath, generatedImgPath };
