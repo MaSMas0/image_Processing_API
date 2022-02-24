@@ -1,5 +1,5 @@
 import { generatedImgPath } from './utilities/utility';
-import fs from 'fs-extra';
+import fs from 'fs';
 
 //caching
 //checking if image exist
@@ -10,8 +10,8 @@ const cachedImage = async (
 ): Promise<boolean> => {
   const generatedImageFilePath = `${generatedImgPath}/${filename}_${width}_${height}.jpg`;
   try {
-    await fs.ensureDir(generatedImgPath);
-    const isProcessedImageExists: boolean = await fs.pathExists(
+    fs.existsSync(generatedImgPath);
+    const isProcessedImageExists: boolean = fs.existsSync(
       generatedImageFilePath
     );
     return isProcessedImageExists;
