@@ -7,3 +7,4 @@ const generatedImgPath: string = path.resolve(
 );
 
 export { existingImgPath, generatedImgPath };
+// to separate the application into small chunks in order to be more scalable

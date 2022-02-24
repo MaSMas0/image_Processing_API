@@ -13,7 +13,7 @@ const cachedImage = async (
     fs.existsSync(generatedImgPath);
     const isProcessedImageExists: boolean = fs.existsSync(
       generatedImageFilePath
-    );
+    ); //existsSync is a filesystem method used to synchronously check if a file already exists in the given path or not
     return isProcessedImageExists;
   } catch (error) {
     throw new Error('file does not exist');

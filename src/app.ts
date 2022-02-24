@@ -11,7 +11,7 @@ const imageProcessing = async (
   try {
     await sharp(existingImageFilePath)
       .resize(Number(width), Number(height))
-      .toFile(generatedImageFilePath);
+      .toFile(generatedImageFilePath); //using sharp to make the image processing on the original image path
   } catch (error) {
     throw new Error('Unable to process image');
   }
