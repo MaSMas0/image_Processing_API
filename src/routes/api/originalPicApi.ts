@@ -2,7 +2,7 @@ import { Router, Request, Response } from 'express';
 
 const routes = Router();
 // third path in magic/images/original/?filename=<filename>
-routes.get('/original', async (req: Request, res: Response) => {
+routes.get('/original', async (req: Request, res: Response): Promise<void> => {
   const filename: string = req.query.filename as string;
 
   try {

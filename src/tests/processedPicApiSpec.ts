@@ -1,15 +1,28 @@
 import fs from 'fs';
+import path from 'path';
+import { imageProcessing } from '../app';
 import { generatedImgPath } from '../utilities/utility';
 
-describe('check caching in images', () => {
-  it('Images after processing properties should exist', () => {
-    expect(
-      fs.existsSync(`${generatedImgPath}/palmtunnel_300_300.jpg`)
-    ).toBeTruthy();
-  });
-  it('Images before processing properties should not be exist', () => {
-    expect(
-      fs.existsSync(`${generatedImgPath}/palmtunnel_500_500.jpg`)
-    ).toBeFalsy();
+describe('check image processing', () => {
+  it('succeeds to write resized thumb file (existing file, valid size values)', async (): Promise<void> => {
+    await imageProcessing(99, 99, 2, 'fjord');
+
+    const cachedImagePath: string = path.resolve(
+      generatedImgPath,
+      `fjord_1_99_99.jpg`
+    );
+    let imageError: null | string = '';
+    try {
+      fs.access(cachedImagePath, (fileExist) => {
+        if (!fileExist) {
+          console.log('no existing file in the mentioned directory');
+        }
+      });
+      imageError = null;
+    } catch {
+      imageError = 'File was not created';
+    }
+
+    expect(imageError).toBeNull();
   });
 });

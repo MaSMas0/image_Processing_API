@@ -12,7 +12,7 @@ app.use(morgan('tiny')); //Add in logging to record when images are processed or
 app.use('/magic', routes);
 //first path in the endpoint and the rest from the routes file magic/images/original or progressive/? so on
 
-app.use((req: express.Request, res: express.Response) => {
+app.use((_req: express.Request, res: express.Response): void => {
   res.status(404).send("ops! can't find what you are looking for :(");
 });
 // in case the user requested the wrong link

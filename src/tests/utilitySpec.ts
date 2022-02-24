@@ -1,15 +1,15 @@
 import { existingImgPath, generatedImgPath } from '../utilities/utility';
-
+import path from 'path';
 describe('Image Directory paths', () => {
   it('check the original images directory absolute paths', () => {
     expect(existingImgPath).toBe(
-      '/Users/mas/Desktop/Image_Processing_API/public/images'
+      path.resolve(__dirname, '../../public/images')
     );
   });
 
   it('check the generated images directory absolute paths', () => {
     expect(generatedImgPath).toEqual(
-      '/Users/mas/Desktop/Image_Processing_API/public/images/thumbs'
+      path.resolve(__dirname, '../../public/images/thumbs')
     );
   });
 });
