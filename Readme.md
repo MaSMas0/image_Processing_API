@@ -116,6 +116,7 @@ npm run test
   ```
   `/magic/images/processing/?width=<width>&height=<height>&blury=<blur_amount>&filename=<image_name>`
   ```
+  kindly put the blury >= 1 in order for the api to work , lower than 1 will make the sharp crash :D
 
   * HTTP Method: `get`
   * Query Param: `filename` - image filename `height` and `width` - dimension of the pictures in pixels and `blury`
