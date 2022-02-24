@@ -7,3 +7,5 @@
 #excluding node modules directory
 node_modules
 
+#excluding dist directory
+dist
