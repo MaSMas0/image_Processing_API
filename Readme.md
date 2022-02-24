@@ -6,38 +6,38 @@
 
 
 ## Project Folder Contents
-* Image_Processing_API
-  /dist
-  /node_modules
-  /public
+### Image_Processing_API
+  * dist
+  * node_modules
+  * public
     - images
     - thumbs
-  /spec
-    -support
-        %jasmine.json
-  /src
-    -routes
-        *api
-            -originalPicApi.ts
-            -processedPicApi.ts
-        *routes.ts
-    -tests
-        *helpers
-            -reporter.ts
-        *appSpec.ts
-        *cachingSpec.ts
-        *originalPicApiSpec.ts
-        *processedPicApiSpec.ts
-        *server_EndPointsSpec.ts
-        *utilitySpec.ts
-    -utilities
-        *utility.ts
-    -app.ts
-    -caching.ts
-    -server.ts
-    -views
-        *index.ejs
-        *processingImg.ejs
+  * spec
+    - support
+        * jasmine.json
+  * src
+    - routes
+        * api
+            - originalPicApi.ts
+            - processedPicApi.ts
+        * routes.ts
+    - tests
+        * helpers
+            - reporter.ts
+        * appSpec.ts
+        * cachingSpec.ts
+        * originalPicApiSpec.ts
+        * processedPicApiSpec.ts
+        * server_EndPointsSpec.ts
+        * utilitySpec.ts
+    - utilities
+        * utility.ts
+    - app.ts
+    - caching.ts
+    - server.ts
+    - views
+        * index.ejs
+        * processingImg.ejs
   * .eslintignore
   * .eslintrc
   * .gitignore
@@ -63,7 +63,7 @@
 
 ## Instructions
 
-  o run the site you need to run it on your localhost server by downloading node.js from [here](https://nodejs.org/en/) and you need to write on terminal the following codes:
+  To run the site you need to run it on your localhost server by downloading node.js from [here](https://nodejs.org/en/) and you need to write on terminal the following codes:
 
 ### installation and running
 
@@ -84,7 +84,7 @@ npm run build
 
 ```
 
-   to start the server running on port `2784`.
+   **to start the server running on port `2784`.**
 
   ## Testing and Linting
 
@@ -103,24 +103,27 @@ npm run test
 ```
 
   ## project End Points
-    ```
+  ```
   `/magic/images/original/?filename=<image_name>`
-    ```
-  HTTP method: `get`
-  Query Param: `filename` - the specific image you are requesting.
-        ```
-      For example: `localhost:2784/magic/images/original/?filename=encenadaport`
-        ```
-        ```
+  ```
+  * HTTP method: `get`
+  * Query Param: `filename` - the specific image you are requesting.
+        
+  ```
+  For example: `localhost:2784/magic/images/original/?filename=encenadaport`
+  ```
+    
+  ```
   `/magic/images/processing/?width=<width>&height=<height>&filename=<image_name>`
-        ```
+  ```
 
-  HTTP Method: `get`
-  Query Param: `filename` - image filename `height` and `width` - dimension of the pictures in pixels
-        ```
-      For example: `localhost:2784/magic/images/processing/?width=300&height=300&filename=santamonica`
-        ```
-  #### Images in offer
+  * HTTP Method: `get`
+  * Query Param: `filename` - image filename `height` and `width` - dimension of the pictures in pixels
+      
+  ```
+  For example: `localhost:2784/magic/images/processing/?width=300&height=300&filename=santamonica`
+  ```
+  ### Images in offer
 
   1. `encenadaport`
   2. `fjord`
@@ -133,6 +136,7 @@ npm run test
   - you can change the query parameters with width and height as long as it is from the 5 pictures existing
   - images that got processed will be saved on your localdisk.
   - any processed image will be cached and it wont be reprocessed to the same parameters again
+  
 **Please note that the version of dependencies is mentioned in package.json**
 
 ### Contact Info for Programmer
