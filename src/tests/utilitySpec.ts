@@ -3,8 +3,6 @@
 till some point then i disabled it */
 import * as util from '../utilities/utility';
 
-// create a request object
-
 describe('Image Directory paths', () => {
   it('check the original images directory absolute paths', () => {
     expect(util.existingImgPath).toBe(
@@ -13,7 +11,7 @@ describe('Image Directory paths', () => {
 
   it('check the generated images directory absolute paths', () => {
     expect(util.generatedImgPath).toEqual(
-      '/Users/mas/Desktop/Image_Processing_API/public/thumbs'
+      '/Users/mas/Desktop/Image_Processing_API/public/images/thumbs'
     )
   });
 });
