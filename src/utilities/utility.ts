@@ -1,6 +1,9 @@
 import path from 'path';
 
-const existingImgPath = path.resolve(__dirname, '../../public/images');
-const generatedImgPath = path.resolve(__dirname, '../../public/images/thumbs');
+const existingImgPath: string = path.resolve(__dirname, '../../public/images');
+const generatedImgPath: string = path.resolve(
+  __dirname,
+  '../../public/images/thumbs'
+);
 
 export { existingImgPath, generatedImgPath };

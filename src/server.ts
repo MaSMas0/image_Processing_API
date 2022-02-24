@@ -8,7 +8,7 @@ const port = 2784;
 app.use('/images', express.static(path.join(__dirname, '../public/images')));
 app.set('view engine', 'ejs');
 app.use('/magic', routes);
-app.use((req, res) => {
+app.use((req: express.Request, res: express.Response) => {
   res.status(404).send("ops! can't find what you are looking for :(");
 });
 app.listen(port, () => {

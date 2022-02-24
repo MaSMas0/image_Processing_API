@@ -1,9 +1,9 @@
-import express from 'express';
+import { Router, Request, Response } from 'express';
 
-const routes = express.Router();
+const routes = Router();
 
-routes.get('/original', async (req, res) => {
-  const filename = req.query.filename as string;
+routes.get('/original', async (req: Request, res: Response) => {
+  const filename: string = req.query.filename as string;
 
   try {
     res.render('index', {

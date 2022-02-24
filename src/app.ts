@@ -5,7 +5,7 @@ const imageProcessing = async (
   width: number,
   height: number,
   filename: string
-) => {
+): Promise<void> => {
   const existingImageFilePath = `${existingImgPath}/${filename}.jpg`;
   const generatedImageFilePath = `${generatedImgPath}/${filename}_${width}_${height}.jpg`;
   try {
