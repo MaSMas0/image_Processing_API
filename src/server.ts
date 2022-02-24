@@ -14,3 +14,5 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`server is up and running :D on port ${port}`);
 });
+
+export { app };
