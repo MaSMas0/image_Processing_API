@@ -114,14 +114,14 @@ npm run test
   ```
     
   ```
-  `/magic/images/processing/?width=<width>&height=<height>&filename=<image_name>`
+  `/magic/images/processing/?width=<width>&height=<height>&blury=<blur_amount>&filename=<image_name>`
   ```
 
   * HTTP Method: `get`
-  * Query Param: `filename` - image filename `height` and `width` - dimension of the pictures in pixels
+  * Query Param: `filename` - image filename `height` and `width` - dimension of the pictures in pixels and `blury`
       
   ```
-  For example: `localhost:2784/magic/images/processing/?width=300&height=300&filename=santamonica`
+  For example: `localhost:2784/magic/images/processing/?width=300&height=300&blury=1&filename=santamonica`
   ```
   ### Images in offer
 
@@ -136,7 +136,7 @@ npm run test
   - you can change the query parameters with width and height as long as it is from the 5 pictures existing
   - images that got processed will be saved on your localdisk.
   - any processed image will be cached and it wont be reprocessed to the same parameters again
-  
+
 **Please note that the version of dependencies is mentioned in package.json**
 
 ### Contact Info for Programmer
