@@ -11,7 +11,10 @@ const cachedImage = async (
 ): Promise<boolean> => {
   const generatedImageFilePath = `${generatedImgPath}/${filename}_${blury}_${width}_${height}.jpg`;
   try {
-    fs.existsSync(generatedImgPath);
+    if (!fs.existsSync(generatedImgPath)) {
+      fs.mkdirSync(generatedImgPath);
+    }
+
     const isProcessedImageExists: boolean = fs.existsSync(
       generatedImageFilePath
     ); //existsSync is a filesystem method to check used to synchronously check if a file already exists in the given path or not
